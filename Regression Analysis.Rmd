@@ -1,0 +1,26 @@
+---
+title: "Regression Analysis"
+output: html_document
+
+---
+
+# Import Libraries
+
+```{r}
+library(readxl)
+library(nortest)
+library(Hmisc)
+library(caret)
+library(dplyr)
+library(car)
+library(MASS)
+```
+
+```{r}
+regresyon <- read_excel("C:/Users/SUDE/Desktop/21936225.MesudeOmer.xlsx")
+names(regresyon) = c("y","x1","x2","x3","x4")
+x4 = as.factor(x4)
+regresyon$y = as.double(regresyon$y)
+regresyon$x2 = as.double(regresyon$x2)
+```
+
